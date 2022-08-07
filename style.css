@@ -1,0 +1,32 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: black;
+    --secondary-color: white;
+}
+
+html.dark {
+    --primary-color: white;
+    --secondary-color: rgb(37, 35, 35);
+}
+
+html {
+    transition: all 0.5s ease-in;
+}
+
+html.dark {
+    background-color: black;
+    color: var(--primary-color);
+
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+}
