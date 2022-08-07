@@ -30,3 +30,150 @@ body {
     overflow: hidden;
     margin: 0;
 }
+
+.toggle {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    border: 0;
+    border-radius: 4px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 100px;
+    cursor: pointer;
+
+}
+
+.toogle:focus {
+    outline: none;
+}
+
+.clock-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.clock {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    border: 2px dotted blue;
+    border-radius: 50%;
+}
+
+.needle {
+    background-color: var(--primary-color);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 85px;
+    width: 3px;
+    transform-origin: bottom center;
+    transition: all 0.5s ease-in;
+}
+
+.needle.hour {
+    transform: translate(-50%, -100%) rotate(0deg);
+}
+
+.needle.minute {
+    transform: translate(-50%, -100%) rotate(0deg);
+    height: 120px;
+}
+
+.needle.second {
+    transform: translate(-50%, -100%) rotate(0deg);
+    height: 135px;
+    background-color: red;
+}
+
+.center-point {
+    background-color: #e74c3c;
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+}
+
+.center-point::after {
+    content: '';
+    background-color: var(--primary-color);
+    width: 5px;
+    height: 5px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+}
+
+.time {
+    font-size: 60px;
+    margin-left: 50px;
+
+}
+
+.date {
+    color: rgb(98, 14, 14);
+    font-size: 24px;
+    letter-spacing: 0.4px;
+    text-transform: uppercase;
+    margin-left: 50px;
+}
+
+
+.date .circle {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    border-radius: 50%;
+    height: 38px;
+    width: 38px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 18px;
+    transition: all 0.5s ease-in;
+    font-size: 32px;
+}
+
+.span.twe {
+    font-size: 30px;
+    position: absolute;
+    top: 7%;
+    left: 50%;
+    color: var(--primary-color);    
+    transform: translate(-50%, -50%);
+}
+
+.span.tre {
+    font-size: 30px;
+    position: absolute;
+    top: 50%;
+    left: 95%;
+    color: var(--primary-color);    
+    transform: translate(-50%, -50%);
+}
+
+.span.six {
+    font-size: 30px;
+    position: absolute;
+    top: 93%;
+    left: 50%;
+    color: var(--primary-color);    
+    transform: translate(-50%, -50%);
+}
+
+.span.nin {
+    font-size: 30px;
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    color: var(--primary-color);    
+    transform: translate(-50%, -50%);
+}
+
