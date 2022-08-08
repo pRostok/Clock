@@ -9,7 +9,7 @@
 
 html.dark {
     --primary-color: white;
-    --secondary-color: rgb(37, 35, 35);
+    --secondary-color: black;
 }
 
 html {
@@ -35,10 +35,31 @@ body {
     color: var(--secondary-color);
     border: 0;
     border-radius: 4px;
-    padding: 8px 12px;
+    padding: 18px 22px;
     position: absolute;
     top: 100px;
     cursor: pointer;
+    font-size: 20px;
+    overflow: hidden; 
+    text-transform: uppercase;   
+}
+
+button .circle {
+    position: absolute;
+    background-color: rgb(236, 0, 0);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    animation: scale .5s ease-out;
+}
+
+
+@keyframes scale {
+    to {
+        transform: translate(-50%, -50%) scale(3);
+        opacity: 0;
+    }
 }
 
 .toogle:focus {
@@ -57,7 +78,7 @@ body {
     position: relative;
     width: 300px;
     height: 300px;
-    border: 2px dotted blue;
+    border: 3px solid var(--primary-color);
     border-radius: 50%;
 }
 
@@ -138,39 +159,115 @@ body {
     font-size: 32px;
 }
 
-.span.twe {
-    font-size: 35px;
+
+
+.line {
+    width: 5px;
+    height: 9px;
+    background-color: var(--primary-color);
     position: absolute;
-    top: 7%;
     left: 50%;
-    color: var(--primary-color);    
-    transform: translate(-50%, -50%);
-}
-
-.span.tre {
-    font-size: 35px;
-    position: absolute;
     top: 50%;
-    left: 95%;
-    color: var(--primary-color);    
-    transform: translate(-50%, -50%);
+    transform-origin: 0 150px;
 }
 
-.span.six {
-    font-size: 35px;
-    position: absolute;
-    top: 93%;
-    left: 50%;
-    color: var(--primary-color);    
-    transform: translate(-50%, -50%);
+.line:nth-child(1) {
+    transform: translateY(-150px);
+}
+.line:nth-child(2) {
+    transform: translateY(-150px) rotateZ(calc(360deg / 12));
+}
+.line:nth-child(3) {
+    transform: translateY(-150px) rotateZ(calc(2 * 360deg / 12));
+}
+.line:nth-child(4) {
+    transform: translateY(-150px) rotateZ(calc(3 * 360deg / 12));
+}
+.line:nth-child(5) {
+    transform: translateY(-150px) rotateZ(calc(4 * 360deg / 12));
+}
+.line:nth-child(6) {
+    transform: translateY(-150px) rotateZ(calc(5 * 360deg / 12));
+}
+.line:nth-child(7) {
+    transform: translateY(-150px) rotateZ(calc(6 * 360deg / 12));
+}
+.line:nth-child(8) {
+    transform: translateY(-150px) rotateZ(calc(7 * 360deg / 12));
+}
+.line:nth-child(9) {
+    transform: translateY(-150px) rotateZ(calc(8 * 360deg / 12));
+}
+.line:nth-child(10) {
+    transform: translateY(-150px) rotateZ(calc(9 * 360deg / 12));
+}
+.line:nth-child(11) {
+    transform: translateY(-150px) rotateZ(calc(10 * 360deg / 12));
+}
+.line:nth-child(12) {
+    transform: translateY(-150px) rotateZ(calc(11 * 360deg / 12));
 }
 
-.span.nin {
-    font-size: 35px;
-    position: absolute;
-    top: 50%;
-    left: 5%;
-    color: var(--primary-color);    
-    transform: translate(-50%, -50%);
+.line::after {
+    font-size: 30px;
+    display: inline-block;
+    margin: 10px 0 0 -5px;
 }
 
+.line:nth-child(1)::after {
+    content: '12';
+    transform: translateX(-10px);
+}
+
+.line:nth-child(2)::after {
+    content: '1';
+    transform: rotateZ(calc(-360deg / 12));
+}
+
+.line:nth-child(3)::after {
+    content: '2';
+    transform: rotateZ(calc(-2 * 360deg / 12));
+}
+
+.line:nth-child(4)::after {
+    content: '3';
+    transform: rotateZ(calc(-3 * 360deg / 12));
+}
+
+.line:nth-child(5)::after {
+    content: '4';
+    transform: rotateZ(calc(-4 * 360deg / 12));
+}
+
+.line:nth-child(6)::after {
+    content: '5';
+    transform: rotateZ(calc(-5 * 360deg / 12));
+}
+
+.line:nth-child(7)::after {
+    content: '6';
+    transform: rotateZ(calc(-6 * 360deg / 12));
+}
+
+.line:nth-child(8)::after {
+    content: '7';
+    transform: rotateZ(calc(-7 * 360deg / 12));
+}
+
+.line:nth-child(9)::after {
+    content: '8';
+    transform: rotateZ(calc(-8 * 360deg / 12));
+}
+
+.line:nth-child(10)::after {
+    content: '9';
+    transform: rotateZ(calc(-9 * 360deg / 12));
+}
+.line:nth-child(11)::after {
+    content: '10';
+    transform: rotateZ(calc(-10 * 360deg / 12));
+}
+.line:nth-child(12)::after {
+    content: '11';
+    transform: rotateZ(calc(-11 * 360deg / 12));
+}
