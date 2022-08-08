@@ -20,7 +20,6 @@ toggle.addEventListener('click', (e) => {
     }
 })
 
-
 function setTime() {
     const time = new Date();
     const month = time.getMonth()

@@ -44,6 +44,20 @@ body {
     text-transform: uppercase;   
 }
 
+@media (max-height: 896px) {
+    .toggle {
+        top: 10%;
+    }
+    
+}
+
+@media (max-height: 667px) {
+    .toggle {
+        top: 3.5%;
+    }
+}
+
+
 button .circle {
     position: absolute;
     background-color: rgb(236, 0, 0);
@@ -53,7 +67,6 @@ button .circle {
     transform: translate(-50%, -50%) scale(0);
     animation: scale .5s ease-out;
 }
-
 
 @keyframes scale {
     to {
@@ -134,6 +147,7 @@ button .circle {
 .time {
     font-size: 60px;
     margin-left: 50px;
+    margin-top: 30px;
 }
 
 .date {
@@ -143,7 +157,6 @@ button .circle {
     text-transform: uppercase;
     margin-left: 50px;
 }
-
 
 .date .circle {
     background-color: var(--primary-color);
@@ -159,8 +172,6 @@ button .circle {
     font-size: 32px;
 }
 
-
-
 .line {
     width: 5px;
     height: 9px;
@@ -174,36 +185,47 @@ button .circle {
 .line:nth-child(1) {
     transform: translateY(-150px);
 }
+
 .line:nth-child(2) {
     transform: translateY(-150px) rotateZ(calc(360deg / 12));
 }
+
 .line:nth-child(3) {
     transform: translateY(-150px) rotateZ(calc(2 * 360deg / 12));
 }
+
 .line:nth-child(4) {
     transform: translateY(-150px) rotateZ(calc(3 * 360deg / 12));
 }
+
 .line:nth-child(5) {
     transform: translateY(-150px) rotateZ(calc(4 * 360deg / 12));
 }
+
 .line:nth-child(6) {
     transform: translateY(-150px) rotateZ(calc(5 * 360deg / 12));
 }
+
 .line:nth-child(7) {
     transform: translateY(-150px) rotateZ(calc(6 * 360deg / 12));
 }
+
 .line:nth-child(8) {
     transform: translateY(-150px) rotateZ(calc(7 * 360deg / 12));
 }
+
 .line:nth-child(9) {
     transform: translateY(-150px) rotateZ(calc(8 * 360deg / 12));
 }
+
 .line:nth-child(10) {
     transform: translateY(-150px) rotateZ(calc(9 * 360deg / 12));
 }
+
 .line:nth-child(11) {
     transform: translateY(-150px) rotateZ(calc(10 * 360deg / 12));
 }
+
 .line:nth-child(12) {
     transform: translateY(-150px) rotateZ(calc(11 * 360deg / 12));
 }
@@ -263,10 +285,12 @@ button .circle {
     content: '9';
     transform: rotateZ(calc(-9 * 360deg / 12));
 }
+
 .line:nth-child(11)::after {
     content: '10';
     transform: rotateZ(calc(-10 * 360deg / 12));
 }
+
 .line:nth-child(12)::after {
     content: '11';
     transform: rotateZ(calc(-11 * 360deg / 12));
